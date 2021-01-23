@@ -1,0 +1,165 @@
+.to-do-app { 
+
+    max-width: 600px;
+    margin: auto;
+
+
+    .to-do-tittle {
+        
+        width: 100%;
+        border-radius: .6rem;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.5rem 3rem;
+        cursor: pointer;
+        background-color: $VeryDarkDesaturatedBlue;
+
+        input {
+
+            width: 80%;
+            height: 4rem;
+            outline: none;
+            font-size: 3rem;
+            color: $LightGrayishBlue ;
+            background-color: transparent;
+            border: none;
+        }
+
+    
+
+        .fa-plus ,.fa-arrow-down {
+
+            color: $DarkGrayishBlue;
+            font-size: 2.5rem;
+
+        }
+   }
+
+   
+
+   .to-do-list {
+       
+    width: 100%;
+    padding: .5rem;
+    margin-top: 5rem;
+    border-radius: .6rem;
+    background-color: $VeryDarkDesaturatedBlue;
+
+    ul li {
+
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        cursor: pointer;
+        background-color: $VeryDarkDesaturatedBlue;
+        border-bottom: 1px $VeryDarkGrayishBlue solid;
+
+        &:hover .default-checkbox ~ .custom-checkbox {
+            background-color: rgb(32, 31, 31);
+          }
+
+          .default-checkbox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+            
+
+            &:checked ~ .custom-checkbox {
+                background: $CheckBackground;
+                
+
+            }
+            &:checked ~ .custom-checkbox::after {
+                display: block;
+                
+            }
+          }
+
+
+          .custom-checkbox {
+            width: 3rem;
+            height: 3rem;
+            border: 2px $VeryDarkGrayishBlue solid;
+            background-color: transparent;
+            border-radius: 5rem;
+            margin: 2.5rem;
+            position: relative;
+            transition: .5s;
+
+            
+
+            &::after {
+
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            &::after {
+
+                left: .9rem;
+                top: .6rem;
+                width: 8px;
+                height: 13px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                transform: rotate(45deg);
+            }
+        }
+
+
+        p {
+
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: $LightGrayishBlue;
+        } 
+
+          
+    }
+
+   }
+
+   .app_footer {
+       display: flex;
+       justify-content: space-between;
+       padding: 2.3rem 2rem;
+       border: none;
+       width: 100%;
+       color: $DarkGrayishBlue;
+       font-size: 1.5rem;
+
+       .sort {
+           display: flex;
+           gap: 10px;
+
+           li {
+               border: none;
+               cursor: pointer;
+
+               &:hover {
+                   color: $LightGrayishBlue;
+               }
+           }
+       }
+
+       .clear {
+           cursor: pointer;
+
+           &:hover {         
+              color: $LightGrayishBlue;
+           }
+           
+       }
+   }
+
+}
