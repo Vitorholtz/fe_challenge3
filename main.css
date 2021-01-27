@@ -85,13 +85,13 @@ header {
   width: 80%;
   height: 4rem;
   outline: none;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #e4e5f1;
   background-color: transparent;
   border: none;
 }
 
-.to-do-app .to-do-tittle .fa-plus, .to-do-app .to-do-tittle .fa-arrow-down {
+.to-do-app .to-do-tittle .fa-arrow-down {
   color: #777a92;
   font-size: 2.5rem;
 }
@@ -104,15 +104,15 @@ header {
   background-color: #25273c;
 }
 
-.to-do-app .to-do-list ul li {
+.to-do-app .to-do-list .to-do-list-item {
   position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -121,11 +121,11 @@ header {
   border-bottom: 1px #393a4c solid;
 }
 
-.to-do-app .to-do-list ul li:hover .default-checkbox ~ .custom-checkbox {
+.to-do-app .to-do-list .to-do-list-item:hover .default-checkbox ~ .custom-checkbox {
   background-color: #201f1f;
 }
 
-.to-do-app .to-do-list ul li .default-checkbox {
+.to-do-app .to-do-list .to-do-list-item .default-checkbox {
   position: absolute;
   top: 0;
   left: 0;
@@ -136,33 +136,33 @@ header {
   z-index: 10;
 }
 
-.to-do-app .to-do-list ul li .default-checkbox:checked ~ .custom-checkbox {
+.to-do-app .to-do-list .to-do-list-item .default-checkbox:checked ~ .custom-checkbox {
   background: linear-gradient(1200deg, #57ddff, #c058f3);
 }
 
-.to-do-app .to-do-list ul li .default-checkbox:checked ~ .custom-checkbox::after {
+.to-do-app .to-do-list .to-do-list-item .default-checkbox:checked ~ .custom-checkbox::after {
   display: block;
 }
 
-.to-do-app .to-do-list ul li .custom-checkbox {
+.to-do-app .to-do-list .to-do-list-item .custom-checkbox {
   width: 3rem;
   height: 3rem;
   border: 2px #393a4c solid;
   background-color: transparent;
   border-radius: 5rem;
-  margin: 2.5rem;
+  margin: 2.5rem 0rem 2.5rem 2.5rem;
   position: relative;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-.to-do-app .to-do-list ul li .custom-checkbox::after {
+.to-do-app .to-do-list .to-do-list-item .custom-checkbox::after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.to-do-app .to-do-list ul li .custom-checkbox::after {
+.to-do-app .to-do-list .to-do-list-item .custom-checkbox::after {
   left: .9rem;
   top: .6rem;
   width: 8px;
@@ -173,9 +173,27 @@ header {
           transform: rotate(45deg);
 }
 
-.to-do-app .to-do-list ul li p {
+.to-do-app .to-do-list .to-do-list-item p {
   font-size: 1.8rem;
   font-weight: 300;
+  color: #e4e5f1;
+}
+
+.to-do-app .to-do-list .to-do-list-item .completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.to-do-app .to-do-list .to-do-list-item .fa-times {
+  color: #777a92;
+  font-size: 2.5rem;
+  margin-right: 2.2rem;
+  z-index: 99;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.to-do-app .to-do-list .to-do-list-item .fa-times:hover {
   color: #e4e5f1;
 }
 
@@ -190,6 +208,7 @@ header {
   border: none;
   width: 100%;
   color: #777a92;
+  background-color: #25273c;
   font-size: 1.5rem;
 }
 
@@ -215,5 +234,11 @@ header {
 
 .to-do-app .app_footer .clear:hover {
   color: #e4e5f1;
+}
+
+.slide {
+  -webkit-transform: translateY(8rem) rotateZ(20deg);
+          transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */

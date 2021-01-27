@@ -21,7 +21,7 @@
             width: 80%;
             height: 4rem;
             outline: none;
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: $LightGrayishBlue ;
             background-color: transparent;
             border: none;
@@ -29,7 +29,7 @@
 
     
 
-        .fa-plus ,.fa-arrow-down {
+          .fa-arrow-down {
 
             color: $DarkGrayishBlue;
             font-size: 2.5rem;
@@ -47,12 +47,12 @@
     border-radius: .6rem;
     background-color: $VeryDarkDesaturatedBlue;
 
-    ul li {
+     .to-do-list-item {
 
         position: relative;
         width: 100%;
         display: flex;
-        justify-content: left;
+        justify-content: space-between;
         align-items: center;
         cursor: pointer;
         background-color: $VeryDarkDesaturatedBlue;
@@ -91,7 +91,7 @@
             border: 2px $VeryDarkGrayishBlue solid;
             background-color: transparent;
             border-radius: 5rem;
-            margin: 2.5rem;
+            margin: 2.5rem 0rem 2.5rem 2.5rem;
             position: relative;
             transition: .5s;
 
@@ -122,10 +122,37 @@
             font-size: 1.8rem;
             font-weight: 300;
             color: $LightGrayishBlue;
-        } 
+        }
+
+        .completed {
+
+            text-decoration: line-through;
+            opacity: 0.5;
+
+
+        }
+        
+
+        .fa-times {
+
+            color: $DarkGrayishBlue;
+            font-size: 2.5rem;
+            margin-right: 2.2rem;
+            z-index: 99;
+            transition: all .2s;
+
+            &:hover {
+
+                color: $LightGrayishBlue;
+
+            }
+            
+
+        }
 
           
     }
+
 
    }
 
@@ -136,6 +163,7 @@
        border: none;
        width: 100%;
        color: $DarkGrayishBlue;
+       background-color: $VeryDarkDesaturatedBlue;
        font-size: 1.5rem;
 
        .sort {
@@ -162,4 +190,10 @@
        }
    }
 
+}
+
+.slide{
+
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
 }
