@@ -123,14 +123,6 @@
             font-weight: 300;
             color: $LightGrayishBlue;
         }
-
-        .completed {
-
-            text-decoration: line-through;
-            opacity: 0.5;
-
-
-        }
         
 
         .fa-times {
@@ -153,6 +145,16 @@
           
     }
 
+    .completed {
+        opacity: 0.4;
+
+        p{ 
+
+        text-decoration: line-through;
+        opacity: 0.5;}
+
+    }
+
 
    }
 
@@ -166,7 +168,7 @@
        background-color: $VeryDarkDesaturatedBlue;
        font-size: 1.5rem;
 
-       .sort {
+       .show {
            display: flex;
            gap: 10px;
 

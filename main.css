@@ -179,11 +179,6 @@ header {
   color: #e4e5f1;
 }
 
-.to-do-app .to-do-list .to-do-list-item .completed {
-  text-decoration: line-through;
-  opacity: 0.5;
-}
-
 .to-do-app .to-do-list .to-do-list-item .fa-times {
   color: #777a92;
   font-size: 2.5rem;
@@ -195,6 +190,15 @@ header {
 
 .to-do-app .to-do-list .to-do-list-item .fa-times:hover {
   color: #e4e5f1;
+}
+
+.to-do-app .to-do-list .completed {
+  opacity: 0.4;
+}
+
+.to-do-app .to-do-list .completed p {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
 .to-do-app .app_footer {
@@ -212,19 +216,19 @@ header {
   font-size: 1.5rem;
 }
 
-.to-do-app .app_footer .sort {
+.to-do-app .app_footer .show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
 
-.to-do-app .app_footer .sort li {
+.to-do-app .app_footer .show li {
   border: none;
   cursor: pointer;
 }
 
-.to-do-app .app_footer .sort li:hover {
+.to-do-app .app_footer .show li:hover {
   color: #e4e5f1;
 }
 
